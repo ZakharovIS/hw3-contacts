@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.hw3_contacts.databinding.FragmentContactsListBinding
 
 class ContactsListFragment : Fragment() {
 
@@ -13,19 +14,21 @@ class ContactsListFragment : Fragment() {
         fun newInstance() = ContactsListFragment()
     }
 
-    private lateinit var viewModel: ContactsListViewModel
+    //private lateinit var viewModel: ContactsListViewModel
+    private var binding: FragmentContactsListBinding? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_contacts_list, container, false)
+        binding = FragmentContactsListBinding.inflate(inflater)
+        return binding!!.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ContactsListViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 
 }
