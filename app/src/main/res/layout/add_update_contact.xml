@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/design_default_color_secondary_variant"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/title_edit_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:text="Добавить контакт"/>
+
+    <EditText
+        android:id="@+id/edit_firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textSize="20dp"
+        android:hint="Имя"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textSize="20dp"
+        android:hint="Фамилия"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textSize="20dp"
+        android:hint="Телефон"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textSize="20dp"
+        android:hint="Дата рождения"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подтвердить"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

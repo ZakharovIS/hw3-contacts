@@ -1,8 +1,10 @@
 package com.example.hw3_contacts.data
 
-interface DelegateAdapterItem {
-    val id: Int
-    val lastName: String
+abstract class DelegateAdapterItem {
+    abstract val id: Int
+    abstract var firstName: String
+    abstract var lastName: String
+    var isSelected: Boolean = false
 }
 
 

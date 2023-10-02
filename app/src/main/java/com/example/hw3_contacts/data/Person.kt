@@ -2,20 +2,20 @@ package com.example.hw3_contacts.data
 
 data class PersonDOB(
     override val id: Int,
+    override var firstName: String,
+    override var lastName: String,
     val picture: String,
-    val firstName: String,
-    override val lastName: String,
     val phone: String,
     val dob: String
-) : DelegateAdapterItem
+) : DelegateAdapterItem()
 
 data class PersonNoDOB(
     override val id: Int,
+    override var firstName: String,
+    override var lastName: String,
     val picture: String,
-    val firstName: String,
-    override val lastName: String,
     val phone: String
-) : DelegateAdapterItem
+) : DelegateAdapterItem()
 
 object Util {
     fun makePersonList(list: List<PersonDTO>): MutableList<DelegateAdapterItem> {
@@ -25,9 +25,9 @@ object Util {
                 newList.add(
                     PersonDOB(
                         id = index,
-                        picture = element.picture.mediumPic,
                         firstName = element.name.firstName,
                         lastName = element.name.lastName,
+                        picture = element.picture.mediumPic,
                         phone = element.phone,
                         dob = element.dob.date
                     )
@@ -36,9 +36,9 @@ object Util {
                 newList.add(
                     PersonNoDOB(
                         id = index,
-                        picture = element.picture.mediumPic,
                         firstName = element.name.firstName,
                         lastName = element.name.lastName,
+                        picture = element.picture.mediumPic,
                         phone = element.phone
                     )
                 )
